@@ -11,8 +11,18 @@
       rel="stylesheet"
     />
     <title>Bouvy Cockpit</title>
-    <script type="module" crossorigin src="/assets/index-BAi1Jmo-.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DQvpHSSD.css">
+    <script>
+      // Thema toepassen vóór React mount → geen flits. Standaard: licht.
+      (function () {
+        try {
+          if (localStorage.getItem("bouvy-cockpit-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DFWNQMP1.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-NYi5C7XX.css">
   </head>
   <body>
     <div id="root"></div>
